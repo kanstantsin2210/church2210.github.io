@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Искусство лонгридов: как создавать увлекательные истории в интернете</title>
+    <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Основное содержимое */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        article {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 3rem 2rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h2 {
+            color: var(--dark-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .full-width-img {
+            width: 100vw;
+            max-width: 100vw;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0;
+        }
+        
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background: var(--light-color);
+            font-style: italic;
+            color: var(--dark-color);
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+        }
+        
+        /* Особые элементы */
+        .highlight-box {
+            background: linear-gradient(to right, #f8f9fa, #fff);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Подвал */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+            
+            .stat-item {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Искусство лонгридов: как создавать увлекательные истории в интернете</h1>
+            <p>Полное руководство по созданию длинных статей, которые люди действительно дочитывают до конца</p>
+            <div class="meta">
+                <span>Автор: Анна Петрова</span>
+                <span>15 мая 2023</span>
+                <span>Время чтения: 12 мин</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <article>
+            <p>В эпоху клипового мышления и бесконечных лент социальных сетей длинные статьи (лонгриды) кажутся анахронизмом. Однако именно они продолжают удерживать внимание читателей, вызывать эмоции и запоминаться. В этом руководстве мы разберёмся, как создавать лонгриды, которые будут читать от начала до конца.</p>
+            
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Человек читает длинную статью на ноутбуке">
+            <p class="caption">Лонгриды требуют особого подхода к оформлению и подаче информации</p>
+            
+            <h2>Что такое лонгрид и зачем он нужен</h2>
+            <p>Лонгрид (от англ. "long read" — длинное чтение) — это формат подачи информации в интернете, который сочетает в себе глубину журналистского расследования, увлекательность художественного произведения и визуальную привлекательность современного дизайна.</p>
+            
+            <div class="highlight-box">
+                <p>В отличие от обычных статей, лонгриды не просто информируют, а погружают читателя в историю, создают эффект присутствия и вызывают эмоциональный отклик.</p>
+            </div>
+            
+            <h3>Преимущества лонгридов</h3>
+            <ul>
+                <li>Глубокое раскрытие темы</li>
+                <li>Высокая вовлечённость читателей</li>
+                <li>Улучшенные показатели возврата на сайт</li>
+                <li>Повышенный шанс на виральность (распространение в соцсетях)</li>
+                <li>Долгосрочная релевантность контента</li>
+            </ul>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">72%</div>
+                    <div class="stat-label">читателей предпочитают длинные статьи, если тема им интересна</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3×</div>
+                    <div class="stat-label">лонгриды делятся в соцсетях чаще, чем короткие статьи</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2.5×</div>
+                    <div class="stat-label">выше время на странице по сравнению с обычными статьями</div>
+                </div>
+            </div>
+            
+            <h2>Структура успешного лонгрида</h2>
+            <p>Хороший лонгрид — это не просто длинный текст. Это тщательно продуманная история с чёткой структурой, которая ведёт читателя от начала до конца.</p>
+            
+            <h3>1. Захватывающее начало</h3>
+            <p>Первые несколько абзацев должны сразу зацепить читателя. Используйте:</p>
+            <ul>
+                <li>Интригующий вопрос</li>
+                <li>Неожиданный факт</li>
+                <li>Короткую историю из жизни</li>
+                <li>Проблему, которая волнует аудиторию</li>
+            </ul>
+            
+            <blockquote>
+                <p>"Хорошее начало — это половина дела. Если вы не зацепили читателя в первые 15 секунд, он уйдёт, как бы гениально ни было продолжение."</p>
+            </blockquote>
+            
+            <h3>2. Основная часть с логичными переходами</h3>
+            <p>Разбейте материал на смысловые блоки с подзаголовками. Каждый новый раздел должен плавно вытекать из предыдущего, сохраняя интерес читателя.</p>
+            
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Структура статьи на доске">
+            
+            <h3>3. Визуальные элементы</h3>
+            <p>Лонгрид — это не только текст. Используйте:</p>
+            <ul>
+                <li>Фотографии и иллюстрации</li>
+                <li>Инфографику</li>
+                <li>Цитаты в оформлении</li>
+                <li>Интерактивные элементы (если возможно)</li>
+            </ul>
+            
+            <h3>4. Сильный финал</h3>
+            <p>Завершение должно оставлять послевкусие и мотивировать на действие. Варианты концовки:</p>
+            <ul>
+                <li>Выводы и обобщение</li>
+                <li>Призыв к действию</li>
+                <li>Открытый вопрос для размышления</li>
+                <li>Ссылка на дополнительные материалы</li>
+            </ul>
+            
+            <h2>Технические аспекты создания лонгридов</h2>
+            <p>Чтобы лонгрид действительно работал, важно учитывать не только содержание, но и форму подачи.</p>
+            
+            <h3>Оптимальная длина</h3>
+            <p>Идеальный лонгрид содержит от 2 000 до 10 000 слов. Однако длина вторична по отношению к качеству контента. Статья должна быть настолько длинной, насколько это необходимо для раскрытия темы.</p>
+            
+            <h3>Оформление текста</h3>
+            <ul>
+                <li>Короткие абзацы (3-4 предложения)</li>
+                <li>Подзаголовки каждые 300-500 слов</li>
+                <li>Выделение ключевых мыслей</li>
+                <li>Маркированные списки для перечислений</li>
+            </ul>
+            
+            <img src="https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Пример хорошо оформленного текста" class="full-width-img">
+            
+            <h2>Примеры успешных лонгридов</h2>
+            <p>Лучший способ научиться создавать хорошие лонгриды — изучать удачные примеры:</p>
+            
+            <h3>1. "Сто дней одиночества" (Meduza)</h3>
+            <p>Мультимедийный проект о человеке, который добровольно ушёл жить в глухой лес. Сочетает текст, фото, видео и аудио.</p>
+            
+            <h3>2. "Как устроен Шереметьево" (Тинькофф Журнал)</h3>
+            <p>Детальное исследование работы аэропорта с инфографикой и интерактивными элементами.</p>
+            
+            <h3>3. "История одного увольнения" (VC.ru)</h3>
+            <p>Личная история, которая раскрывает системные проблемы в IT-индустрии.</p>
+            
+            <h2>Заключение</h2>
+            <p>Создание качественного лонгрида требует времени, усилий и внимания к деталям. Однако результат стоит того — такие материалы не только привлекают внимание, но и формируют лояльную аудиторию, повышают доверие к бренду и надолго остаются в памяти читателей.</p>
+            
+            <p>Главный секрет успешного лонгрида прост: это должна быть история, которую вы сами хотели бы прочитать до конца. Если вам интересно писать, читателям будет интересно читать.</p>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>Хотите получать больше таких материалов?</h3>
+            <p>Подпишитесь на нашу рассылку и получайте лучшие статьи о контент-маркетинге прямо на почту</p>
+            
+            <div class="social-links">
+                <a href="#">VK</a>
+                <a href="#">TG</a>
+                <a href="#">FB</a>
+                <a href="#">YT</a>
+            </div>
+            
+            <p>© 2023 Школа контент-маркетинга. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
